@@ -23,7 +23,6 @@ body {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 50%;
   border: 1px solid #D8D2C8;
   margin-bottom: 1.5rem;
 }
