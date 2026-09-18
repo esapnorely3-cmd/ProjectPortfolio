@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  background-color: #EDE9E3;
+  color: #201D1A;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.5;
+}
+ 
+/* ---- Introduce Yourself section ---- */
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+ 
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #D8D2C8;
+  margin-bottom: 1.5rem;
+}
+ 
+.intro h1 {
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+}
+ 
+.intro-text {
+  color: #5C574F;
+  margin: 0 auto 1rem;
+  max-width: 46ch;
+}
+ 
+.tagline {
+  color: #2E4034;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 1.75rem;
+}
+ 
+.btn {
+  display: inline-block;
+  background-color: #2E4034;
+  color: #FFFFFF;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+ 
+.btn:hover,
+.btn:focus-visible {
+  opacity: 0.85;
+}
+ 
+/* Responsive: shrink padding and photo on small screens */
+@media (max-width: 480px) {
+  .intro {
+    padding: 3rem 1rem;
+  }
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+}
