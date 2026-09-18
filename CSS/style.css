@@ -1,5 +1,4 @@
 
-Style · CSS
 * {
   box-sizing: border-box;
 }
@@ -20,11 +19,13 @@ body {
 }
  
 .profile-photo {
+  display: block;
   width: 180px;
   height: 180px;
   object-fit: cover;
+  border-radius: 50%;
   border: 1px solid #D8D2C8;
-  margin-bottom: 1.5rem;
+  margin:0 auto 1.5rem;
 }
  
 .intro h1 {
@@ -107,54 +108,40 @@ body {
   margin-bottom: 0.4rem;
 }
  
-@media (max-width: 480px) {
-  .intro {
-    padding: 3rem 1rem;
-  }
-  .profile-photo {
-    width: 140px;
-    height: 140px;
-  }
-  .intro h1 {
-    font-size: 1.8rem;
-
-    .skills {
+.skills {
   max-width: 700px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
   border-top: 1px solid #D8D2C8;
 }
- 
+
 .skills h2 {
   font-size: 1.6rem;
   margin: 0 0 1.5rem;
 }
- 
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+  gap: 1.4rem;
 }
- 
-.skill-card {
+,skill-card {
   background-color: #FFFFFF;
   border: 1px solid #D8D2C8;
   border-radius: 4px;
   padding: 1.4rem;
 }
- 
 .skill-card h3 {
   margin: 0 0 0.4rem;
   font-size: 1.05rem;
 }
- 
+
 .skill-card p {
   margin: 0;
   color: #5C574F;
   font-size: 0.92rem;
 }
- 
-/* Responsive: shrink padding and photo on small screens */
+
 @media (max-width: 480px) {
   .intro {
     padding: 3rem 1rem;
