@@ -1,3 +1,5 @@
+
+Style · CSS
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,6 @@ body {
   line-height: 1.5;
 }
  
-/* ---- Introduce Yourself section ---- */
 .intro {
   max-width: 600px;
   margin: 0 auto;
@@ -60,7 +61,53 @@ body {
   opacity: 0.85;
 }
  
-/* Responsive: shrink padding and photo on small screens */
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid #D8D2C8;
+}
+ 
+.about h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.5rem;
+}
+ 
+.bio {
+  color: #5C574F;
+  margin: 0 0 1rem;
+}
+ 
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+ 
+.about-block {
+  flex: 1 1 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #D8D2C8;
+  border-radius: 4px;
+  padding: 1.4rem;
+}
+ 
+.about-block h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+ 
+.about-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #5C574F;
+}
+ 
+.about-block li {
+  margin-bottom: 0.4rem;
+}
+ 
 @media (max-width: 480px) {
   .intro {
     padding: 3rem 1rem;
@@ -73,3 +120,4 @@ body {
     font-size: 1.8rem;
   }
 }
+ 
