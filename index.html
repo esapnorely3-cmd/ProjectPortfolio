@@ -13,14 +13,14 @@
    <header class="site-nav">
     <nav class="nav-inner">
       <a href="#intro" class="nav-brand">Norely</a>
-      <ul class="nav-links">
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#expreience">Experience</a></li>
-        <li><a href="#contact"></a>Contact</li>
-      </ul>
+   <ul class="nav-links">
+    <li><a href="#intro">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+   <li><a href="#experience">Experience</a></li>
+   <li><a href="#contact">Contact</a></li>
+</ul>
     </nav>
    </header>
 
@@ -156,34 +156,105 @@
         <div class="contact-row"><span class="contact-icon" aria-hidden="true">✉️</span>Open to opportunities</div>
       </div>
     </section>
-        <!-- Activity 4: Projects -->
-    <section class="projects" id="projects">
-      <h2>Projects</h2>
+    <!-- Activity 4: Projects -->
+<section class="projects" id="projects">
+  <h2>Projects</h2>
 
-      <div class="Projects-grid">
-        <div class="project-card">
-          <img
-          class="Digiclock_Prototype">
-          <src="images/Digiclock.png"
-          alt="Project 1"
-          width="320"
-          height="180"
-          loading="lazy">
-        <div class="project-body">
-          <h3>Digiclocl</h3>
-          <p class="project-desc">Manage the time of studying</p>
-          <div class="tech-tags">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <a href="#" class="btn btn-small" target="_blank" rel="noopener">View Project</a>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img
+        class="project-image"
+        src="images/Digiclock.png"
+        alt="Digiclock study timer app prototype"
+        width="330"
+        height="680"
+        loading="lazy">
+
+      <div class="project-body">
+        <h3>Digiclock</h3>
+        <p class="project-desc">Manage the time of studying</p>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
         </div>
-          
-        </div>
+        <a href="#" class="btn btn-small" target="_blank" rel="noopener">View Project</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+    <!-- Activity 5: Education & Experience table -->
+ <section class="experience" id="experience">
+  <h2>Education &amp; Experience</h2>
 
+  <div class="table-wrap">
+    <table class="edu-table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Institution / Program</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023 - 2026</td>
+          <td>Caraga State University</td>
+          <td>BS Information Technology, 4th year</td>
+        </tr>
+        <tr>
+          <td>2021 - 2023</td>
+          <td>Senior High School</td>
+          <td>ACP AgriCrop Strand</td>
+        </tr>
+        <tr>
+           <td>2017 - 2021</td>
+            <td>Junior High School</td>
+            <td>San  Vicente National High School</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- Activity7 Contact section and form-->
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+        <div class="contact-row"><span class="contact-icon" aria-hidden="true">📍</span>Northern Mindanao, Philippines</div>
+        <div class="contact-row"><span class="contact-icon" aria-hidden="true">🎓</span>Caraga State University, BSIT 4th year</div>
+        <div class="contact-row"><span class="contact-icon" aria-hidden="true">✉️</span>Open to opportunities, internships, and collaborations</div>
+      </div>
+
+     <div class="card contact-form-card">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <!--Activity 8-->
+   
+</section>
 
     </main>
 

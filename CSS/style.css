@@ -410,4 +410,367 @@ dl {
   .btn {
     transition: none;
   }
+
+  /*ACTIVITY4*/
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  max-width: 360px;
+  overflow: hidden;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.project-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 420px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  object-fit: contain;
+  background-color: #111;
+  box-sizing: content-box;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+}
+
+.project-body h3 {
+  color: var(--accent-light);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.project-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.2rem 0.7rem;
+  background-color: rgba(29, 158, 117, 0.12);
+  color: var(--accent-light);
+  font-size: 0.78rem;
+  border-radius: 999px;
+}
+
+.btn-small {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+}
+/* Activity 5: Education & Experience table */
+
+.table-wrap {
+  overflow-x: auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.edu-table th,
+.edu-table td {
+  padding: 0.85rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-table th {
+  color: var(--accent-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(29, 158, 117, 0.08);
+}
+
+.edu-table td {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.edu-table td:first-child {
+  color: var(--accent-light);
+  white-space: nowrap;
+  padding-right: 3rem;   /* extra gap between Year and Program */
+}
+
+.edu-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.edu-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/*Acttivity6*/
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg, #0b111c);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-light);
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
+
+
+
+/* ===== Activity 7: Contact form ===== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.7rem 0.9rem;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--accent-light);
+  box-shadow: 0 0 0 3px rgba(93, 202, 165, 0.15);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.btn {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .edu-table th,
+  .edu-table td {
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+/* ===== Activity 9: Footer ===== */
+
+.site-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* resposive design*/
+
+/* ===== Activity 8: Responsive design ===== */
+
+/* Safety rules for all screen sizes */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Tablet: 768px and below */
+@media (max-width: 768px) {
+
+  /* Navigation: stack the brand above the links */
+  .nav-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
+
+  /* Intro: photo on top, text below, centered */
+  .intro-inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* About and skills: 2 columns */
+  .card-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .project-image {
+    height: 360px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .edu-table th,
+  .edu-table td {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .contact-form .btn {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
 }
