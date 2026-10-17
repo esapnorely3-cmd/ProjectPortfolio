@@ -10,6 +10,8 @@
   --accent: #1d9e75;
   --accent-light: #5dcaa5;
   --radius: 16px;
+  --font-body: system-ui, "Segeo UI", Roboto,Arial,sans-serif;
+  --font-display: "Georgia,Times New Roman",serif;
   color-scheme: dark;
 }
 
@@ -32,7 +34,8 @@ body {
 }
 
 img {
-  max-width: 200%;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -153,11 +156,12 @@ dl {
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
   background-color: #7fd8ba;
+  transform: translateY(-2px);
 }
 
 .btn:focus-visible {
@@ -168,11 +172,14 @@ dl {
 
 .about,
 .skills,
-.contact {
+.projects,
+.experience,
+.contact
+ {
   max-width: 860px;
   margin: 0 auto;
   padding: 3rem 2.5rem 0;
-  scroll-margin-top: 1rem;
+  scroll-margin-top: 80px;
 }
 
 .contact {
@@ -181,6 +188,8 @@ dl {
 
 .about h2,
 .skills h2,
+.projects h2,
+.experience h2,
 .contact h2 {
   margin-bottom: 1.25rem;
   color: var(--text-strong);
@@ -316,7 +325,7 @@ dl {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
@@ -410,6 +419,7 @@ dl {
   .btn {
     transition: none;
   }
+}
 
   /*ACTIVITY4*/
 .projects-grid {
@@ -421,7 +431,7 @@ dl {
 .project-card {
   display: flex;
   flex-direction: column;
-  flex: 1 1 260px;
+  flex: 1 1 240px;
   max-width: 360px;
   overflow: hidden;
   background-color: var(--surface);
@@ -519,7 +529,7 @@ dl {
 .edu-table td:first-child {
   color: var(--accent-light);
   white-space: nowrap;
-  padding-right: 3rem;   /* extra gap between Year and Program */
+  padding-right: 3rem;  
 }
 
 .edu-table tbody tr:last-child td {
@@ -543,6 +553,8 @@ dl {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 860px;
+  margin: 0 auto;
   padding: 1rem 1.5rem;
 }
 
@@ -571,6 +583,40 @@ section {
 
 
 /* ===== Activity 7: Contact form ===== */
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-row:first-child {
+  padding-top: 0;
+}
+
+.contact-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.contact-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(29, 158, 117, 0.12);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.contact-form-card {
+  margin-top: 1.5rem;
+}
 
 .contact-form {
   display: flex;
@@ -609,60 +655,20 @@ section {
   box-shadow: 0 0 0 3px rgba(93, 202, 165, 0.15);
 }
 
-.contact-form .btn {
-  align-self: flex-start;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-body);
+.form-row input:hover,
+.form-row textarea:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn {
-  transition: transform 0.2s ease, opacity 0.2s ease;
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
-
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .intro-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .edu-table th,
-  .edu-table td {
-    padding: 0.7rem 0.9rem;
-  }
-}
-
 /* ===== Activity 9: Footer ===== */
 
 .site-footer {
@@ -673,15 +679,11 @@ img {
   text-align: center;
 }
 
-/* resposive design*/
-
 /* ===== Activity 8: Responsive design ===== */
 
-/* Safety rules for all screen sizes */
 * {
   box-sizing: border-box;
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -773,4 +775,4 @@ main {
     height: 120px;
   }
 }
-}
+
