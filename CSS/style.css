@@ -732,7 +732,7 @@ main {
 
   .card-grid,
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,minmax(0, 1fr));
   }
 
   .card-wide {
@@ -754,8 +754,12 @@ main {
   }
 
 
-  .skills-grid {
-    grid-template-columns: 1fr;
+    .card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card-wide {
+    grid-column: auto;
   }
 
   .project-card {
@@ -783,6 +787,10 @@ main {
   .profile-photo {
     width: 120px;
     height: 120px;
+  }
+  html,
+  body {
+    overflow-x: hidden;
   }
 }
 
