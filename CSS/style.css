@@ -105,6 +105,7 @@ dl {
 
 .intro-content {
   flex: 1;
+  text-align: center;
 }
 
 .badge {
@@ -136,6 +137,7 @@ dl {
 .intro-text {
   max-width: 46ch;
   margin-bottom: 1rem;
+  margin-inline: auto;
   color: var(--text-muted);
 }
 
@@ -212,6 +214,17 @@ dl {
   color: var(--accent-light);
   font-size: 1rem;
   font-weight: 500;
+}
+.badge-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.badge-row .badge {
+  margin-bottom: 0;
 }
 /* Activity 2 */
 .card-grid {
@@ -695,10 +708,9 @@ main {
   padding: 0 1.25rem;
 }
 
-/* Tablet: 768px and below */
 @media (max-width: 768px) {
 
-  /* Navigation: stack the brand above the links */
+  
   .nav-inner {
     flex-direction: column;
     gap: 0.75rem;
@@ -711,14 +723,12 @@ main {
     gap: 0.5rem 1rem;
   }
 
-  /* Intro: photo on top, text below, centered */
   .intro-inner {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
 
-  /* About and skills: 2 columns */
   .card-grid,
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -726,6 +736,9 @@ main {
 
   .card-wide {
     grid-column: 1 / -1;
+  }
+    .badge-row {
+    justify-content: center;
   }
 }
 
